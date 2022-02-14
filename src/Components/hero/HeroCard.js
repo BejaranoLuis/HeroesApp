@@ -8,7 +8,9 @@ export const HeroCard = ({
     first_appearance,
     characters
 }) => {
-    const imgPath = `/Assets/${id}.jpg`;
+    const imagePath = require.context('../../Assets', true);
+    
+
 
     return (
         <>
@@ -16,7 +18,7 @@ export const HeroCard = ({
                 <div className="card animate__animated animate__fadeInLeftBig">
                     <div className="row g-0">
                         <div className="col-4">
-                            <img src={imgPath}
+                            <img src={imagePath(`./${id}.jpg`)}
                                 className="card-img-top"
                                 alt={superhero}
                             />

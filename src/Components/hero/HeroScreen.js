@@ -16,7 +16,9 @@ export const HeroScreen = () => {
         return <Navigate to='/' />
     }
 
-    const imagePath = `/Assets/${hero.id}.jpg`;
+    
+    const imagePath = require.context('../../Assets', true);
+
 
 
     const handleReturn = () => {
@@ -27,7 +29,7 @@ export const HeroScreen = () => {
         <div className='row mt-5'>
             <div className='col-4'>
                 <img
-                    src={imagePath}
+                    src={imagePath(`./${hero.id}.jpg`)}
                     alt={hero.superhero}
                     className="img-thumbnail animate__animated animate__fadeInLeftBig"
                 />
