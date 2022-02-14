@@ -1,0 +1,12 @@
+.title-login{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.form-login{
+    background-color: #f8f9fac5;
+    min-height: 550px;
+    border-radius: 10px;
+    border: 1px solid #f8f9fa38;
+}
